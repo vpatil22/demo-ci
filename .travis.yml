@@ -1,13 +1,4 @@
-before_install:
-  - echo -e "machine github.com\n  login $GIT_TOKEN" > ~/.netrc
-language: bash
-script:
-    - bash script_privaterepo.sh
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
-  on:
-    branch: master
+language: ruby
+rvm:
+ - 2.2
+ - jruby
