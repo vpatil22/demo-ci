@@ -1,3 +1,9 @@
+before_install:
+  - echo -e "machine github.com\n  login $GIT_TOKEN" > ~/.netrc
+language: bash
+script:
+    - bash script_privaterepo.sh
+
 deploy:
   provider: pages
   skip-cleanup: true
